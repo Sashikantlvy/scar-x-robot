@@ -1,9 +1,9 @@
 from gpytranslate import SyncTranslator
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext
-from MukeshRobot import pbot as app
-from MukeshRobot import dispatcher
-from MukeshRobot.modules.disable import DisableAbleCommandHandler
+from FallenRobot import pbot as app
+from FallenRobot import dispatcher
+from FallenRobot.modules.disable import DisableAbleCommandHandler
 from pyrogram.types import InputMediaVideo
 import random
 trans = SyncTranslator()
@@ -77,10 +77,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import __version__ as o
 from telethon import __version__ as s
 
-from MukeshRobot import OWNER_ID, dispatcher
-from MukeshRobot import pbot as client
+from FallenRobot import OWNER_ID, dispatcher
+from FallenRobot import pbot as client
 
-Mukesh = "https://telegra.ph/file/6f04cb09ff8e8af19ae02.jpg"
+Mukesh = "https://telegra.ph/file/02dd4f129ba4d7a3f2813.jpg"
 
 
 @client.on_message(filters.command(["repo", "source"]))
