@@ -190,7 +190,7 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rᴜʟᴇs"].send_rules(update, args[0], from_pm=True)
 
      else:
-            first_name = update.effective_user.first_name
+          first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
                 "CAACAgUAAxkBAANLZeGzjCFwih_LZDqdQHSzwGpbgMYAAlwOAAKWTBFXSUJWLJ9u_U80BA"
             )
