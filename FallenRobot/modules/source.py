@@ -28,13 +28,25 @@ async def repo(_, message: Message):
                 [
                     InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=OWNER_ID),
                     InlineKeyboardButton(
-                        "sᴏᴜʀᴄᴇ",
-                        url="https://telegra.ph/file/78be765f35211e764a9d5.mp4",
+                        "sᴏᴜʀᴄᴇ", 
+                        callback_data="gib_source",
                     ),
                 ]
             ]
         ),
     )
+
+@app.on_callback_query(filters.regex("gib_source"))
+async def gib_repo_callback(_, callback_query):
+    await callback_query.edit_message_media(
+        media=InputMediaVideo("https://telegra.ph/file/9235d57807362b4e227a3.mp4", has_spoiler=True),
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [close_button]
+            ]
+        ),
+        )
+close_button = InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
 
 
 __mod_name__ = "Rᴇᴩᴏ"
